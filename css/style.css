@@ -7,13 +7,15 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#fff;
+    overflow-x:hidden;
 }
 
 .container{
-    width:1200px;
-    margin:auto;
+    max-width:1200px;
+    width:100%;
+    margin:0 auto;
+    padding:0 15px;
 }
-
 header{
     padding:20px 0;
 }
@@ -26,6 +28,8 @@ display:flex;
 justify-content:space-between;
 
 align-items:center;
+
+padding: 0 20px;
 
 }
 
@@ -62,6 +66,12 @@ border-radius:5px;
 cursor:pointerx;
 
 }
+.menu-toggle{
+    font-size:32px;
+    cursor:pointer;
+    display:none;
+}
+
 
 /* Hero section */
 
@@ -179,7 +189,7 @@ color:#666;
     display: block;
 }
 
-/* Client section */
+/* ================= CLIENT SECTION ================= */
 
 .clients{
     padding:70px 0;
@@ -197,17 +207,24 @@ color:#666;
     margin-bottom:40px;
 }
 
-.client-logos{
+/* Desktop */
+
+.desktop-logos{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    flex-wrap:wrap;
 }
 
-.client-logos img{
+.desktop-logos img{
     width:50px;
-    height:auto;
 }
+
+/* Mobile slider hidden on desktop */
+
+.logo-slider{
+    display:none;
+}
+
 
 /* Community section */
 
@@ -553,4 +570,367 @@ footer{
     border:none;
     border-radius:5px;
     outline:none;
+}
+/* Responsive Design */
+@media (max-width:768px){
+
+    nav{
+        position: relative;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav button{
+        display:none;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#fff;
+
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+
+        max-height:0;
+        overflow:hidden;
+
+        transition:0.4s;
+    }
+
+    .nav-links.active{
+        max-height:350px;
+    }
+
+    .nav-links li{
+        padding:15px 0;
+        border-bottom:1px solid #ddd;
+    }
+
+    /* hero section */
+
+    .hero{
+    padding: 50px 0;
+}
+
+.hero-content{
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-text{
+    width: 100%;
+}
+
+.hero-text h1{
+    font-size: 38px;
+    line-height: 50px;
+}
+
+.hero-text p{
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.hero-image{
+    display: none;
+}
+
+.hero-btn{
+    display: inline-block;
+}
+/* Client Section */
+
+    .desktop-logos{
+        display:none;
+    }
+
+    .logo-slider{
+        display:block;
+        overflow:hidden;
+        width:100%;
+    }
+
+    .logo-track{
+    display:flex;
+    width:200%;
+    transition:transform .6s ease-in-out;
+}
+
+  .logo-group{
+    flex:0 0 50%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+
+    .logo-group img{
+        width:60px;
+    }
+    /* card Section */
+    /* Community Section */
+
+.community{
+    padding:50px 0;
+}
+
+.community h2{
+    font-size:30px;
+    line-height:40px;
+}
+
+.community p{
+    font-size:15px;
+}
+
+.community-cards{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+}
+
+.card{
+    width:100%;
+    max-width:400px;
+    padding:30px 20px;
+}
+
+.card img{
+    width:55px;
+}
+
+.card h3{
+    font-size:22px;
+}
+
+.card p{
+    font-size:15px;
+    line-height:24px;
+}
+/* ================= Pixelgrade Responsive ================= */
+
+.pixelgrade{
+    padding:50px 0;
+}
+
+.pixelgrade-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.pixelgrade-image{
+    display:none;
+}
+
+.pixelgrade-text{
+    width:100%;
+}
+
+.pixelgrade-text h2{
+    font-size:30px;
+    line-height:40px;
+}
+
+.pixelgrade-text p{
+    font-size:15px;
+    line-height:26px;
+}
+
+.pixelgrade-text button{
+    margin-top:10px;
+}
+/* ================= Statistics Responsive ================= */
+
+.statistics{
+    padding:50px 0;
+}
+
+.stats-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.stats-text{
+    width:100%;
+    margin-bottom:40px;
+}
+
+.stats-text h2{
+    font-size:30px;
+    line-height:40px;
+}
+
+.stats-text p{
+    font-size:15px;
+}
+
+/* Stats Box */
+
+.stats-box{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+/* One Stat */
+
+.stat{
+    display:flex;
+    flex-direction:column;   /* Icon upar */
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:12px;
+}
+
+/* Icon */
+
+.stat img{
+    width:45px;
+    height:45px;
+}
+
+/* Number */
+
+.stat h3{
+    font-size:22px;
+    margin:0;
+}
+
+/* Text */
+
+.stat p{
+    font-size:14px;
+    color:#717171;
+    margin:0;
+}
+/* ================= Footer Design Responsive ================= */
+
+.footer-design{
+    padding:50px 0;
+}
+
+.footer-design-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.footer-design-image{
+    display:none;
+}
+
+.footer-design-text{
+    width:100%;
+}
+
+.footer-design-text h2{
+    font-size:30px;
+    line-height:40px;
+}
+
+.footer-design-text p{
+    font-size:15px;
+    line-height:26px;
+}
+
+.learn-btn{
+    margin-top:10px;
+}
+/* ================= Marketing Responsive ================= */
+
+.marketing{
+    padding:50px 0;
+}
+
+.marketing h2{
+    font-size:30px;
+    line-height:40px;
+}
+
+.marketing-text{
+    width:100%;
+    margin:20px auto 40px;
+    font-size:15px;
+    line-height:26px;
+}
+
+.marketing-cards{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:35px;
+}
+
+.marketing-card{
+    width:100%;
+    max-width:380px;
+}
+
+.marketing-card img{
+    width:100%;
+}
+
+.card-content{
+    width:90%;
+}
+
+.card-content h3{
+    font-size:18px;
+    line-height:28px;
+}
+/* ================= CTA Responsive ================= */
+
+.cta{
+    padding:50px 0;
+}
+
+.cta h2{
+    font-size:32px;
+    line-height:45px;
+}
+
+.cta button{
+    padding:14px 28px;
+    font-size:15px;
+}
+
+/* ================= Footer Responsive ================= */
+
+footer{
+    padding:50px 0;
+}
+
+.footer-content{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    text-align:center;
+}
+
+.footer-left{
+    width:100%;
+}
+
+.footer-links{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.footer-links input{
+    width:100%;
+    max-width:300px;
+    margin:0 auto;
+    display:block;
+}
 }

@@ -12,20 +12,27 @@
 <body>
     <header>
         <div class="container">
-           <nav>
-            <div class="logo">
-            <h2>Nexcent</h2>
-            </div>
-           <ul>
+       <nav>
+
+    <div class="logo">
+        <h2>Nexcent</h2>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
         <li><a href="#">Home</a></li>
         <li><a href="#">Features</a></li>
         <li><a href="#">Community</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">Pricing</a></li>
+    </ul>
 
-        </ul>
-        <button>Register Now →</button>
-        </nav> 
+    <button>Register Now →</button>
+
+    <div class="menu-toggle" id="menuToggle">
+        ☰
+    </div>
+
+</nav>
         </div>
     </header>
  <section class="hero">
@@ -65,15 +72,34 @@ Where to grow your business as a photographer.
 
         <p>We have been working with some Fortune 500+ clients</p>
 
-        <div class="client-logos">
+        <!-- Desktop -->
+        <div class="desktop-logos">
+            <img src="images/Logo1.svg" alt="">
+            <img src="images/Logo2.svg" alt="">
+            <img src="images/Logo3.svg" alt="">
+            <img src="images/Logo4.svg" alt="">
+            <img src="images/Logo5.svg" alt="">
+            <img src="images/Logo6.svg" alt="">
+        </div>
 
-            <img src="images/logo1.svg" alt="">
-            <img src="images/logo2.svg" alt="">
-            <img src="images/logo3.svg" alt="">
-            <img src="images/logo4.svg" alt="">
-            <img src="images/logo5.svg" alt="">
-            <img src="images/logo6.svg" alt="">
-            <img src="images/logo7.svg" alt="">
+        <!-- Mobile Slider -->
+        <div class="logo-slider">
+
+            <div class="logo-track" id="logoTrack">
+
+                <div class="logo-group">
+                    <img src="images/Logo1.svg" alt="">
+                    <img src="images/Logo2.svg" alt="">
+                    <img src="images/Logo3.svg" alt="">
+                </div>
+
+                <div class="logo-group">
+                    <img src="images/Logo4.svg" alt="">
+                    <img src="images/Logo5.svg" alt="">
+                    <img src="images/Logo6.svg" alt="">
+                </div>
+
+            </div>
 
         </div>
 
@@ -390,4 +416,7 @@ Where to grow your business as a photographer.
 
 </footer>
 
-    </body>
+
+
+<script src="js/script.js"></script>
+</body>
